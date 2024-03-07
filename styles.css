@@ -1,92 +1,120 @@
-body{
-    width: auto;
-    height: auto;
+body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     background-image: url(imagenes/fondo2.webp);
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.container-logo{
 
+.container-logo {
     width: 100%;
-    height: 180px;
+    height: 15vh; /* Usamos altura relativa al 15% de la altura de la pantalla */
     background: rgba(255, 255, 255, 0.637);
     display: flex;
     justify-content: left;
     align-items: center;
-    
 }
 
-.img-logo{
-    margin: 0px 40px;
-}
-.container-main{
-    width: 80%;
-    height: 750px;
-    background-color: rgba(240, 248, 255, 0.562);
-    margin: 0 auto;
-    border-radius: 12px;
-    
-}
-h2{
-    font-size: 35px;
-    text-align: center;
-    padding-top: 20px;
+.img-logo {
+    margin: 0 5vw; /* Usamos margen relativo al 5% del ancho de la pantalla */
 }
 
-.container-encuesta{
-
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-
+.tmbtn{
+    width:300px;
 }
 
-.container-questions{
-    height: 600px;
-    font-size: 30px;
-}
-.optionContainer{
-    margin-top: 10px;
-}
-
-
-.selector{
-    width: 71%;
-    height: 35px;
-    margin: 10px 120px;
-}
-label{
-    margin: 10px 120px;
-}
-
-input{
-    width: 70%;
+.des{
+    width:400px;
     height: 30px;
-    margin: 10px 120px;
 }
 
+.des1{
+    width: 400px;
+    height: 25px;
+}
 
+.container-main {
+    width: 100%;
+    max-width: 1200px; /* Limitamos el ancho máximo */
+    min-height: 50vh; /* Establecemos una altura mínima de la pantalla */
+    background-color: rgba(240, 248, 255, 0.562);
+    margin: 15px auto;
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 20px; /* Añadimos relleno */
+}
 
-button{
-    width: 350px;
-    height: 50px;
-    font-size: 30px;
+h2 {
+    font-size: 2.5vw; /* Usamos tamaño de fuente relativo al 2.5% del ancho de la pantalla */
+    text-align: center;
+}
+
+.container-encuesta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Permitimos que los elementos se ajusten automáticamente */
+    gap: 20px; /* Añadimos espacio entre columnas */
+}
+
+.container-questions {
+    font-size: 2vw; /* Usamos tamaño de fuente relativo al 2% del ancho de la pantalla */
+}
+
+.selector,
+label,
+input,
+button {
+    width: 100%; /* Los elementos ocuparán todo el ancho disponible */
+    max-width: 100%; /* Limitamos el ancho máximo */
+    margin: 10px 0; /* Ajustamos los márgenes verticalmente */
+    height: 35px;
+}
+
+button {
+    font-size: 2vw; /* Usamos tamaño de fuente relativo al 2% del ancho de la pantalla */
+    height: 50px; /* Altura automática para ajustarse al contenido */
     background: mediumblue;
     border-radius: 12px;
     color: white;
     transition: all 1s;
+    
+    
 }
 button:hover{
     transform: scale(1.3);
 }
 
-.btn-addQuestion{
-
-
-    margin: 40px 200px;
+@media screen and (max-width:768px) {
+    .container-main {
+        width: 90%; /* Ajustamos el ancho en pantallas pequeñas */
+        background-image: none;
+    }
+    
+    
 }
 
-.sendSurvey{
-    margin: 50px 180px;
+@media screen and (min-width: 1200px) {
+    /* Aquí puedes definir estilos específicos para pantallas grandes si lo necesitas */
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-main {
+        width: 90%; /* Reducimos un poco el ancho para pantallas grandes */
+        height: auto; /* Altura automática para ajustarse al contenido */
+    }
+
+    button {
+        
+        height: 60px; /* Altura automática para ajustarse al contenido */
+        margin: 20px 0; /* Ajustamos los márgenes verticalmente */
+    }
+
+    .container-questions {
+        box-sizing: border-box; /* Incluimos el borde y el padding en el ancho */
+    }
+    
+    
 }

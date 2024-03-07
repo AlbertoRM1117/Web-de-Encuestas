@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuestas en línea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/icon.png">
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <img src="imagenes/logo-origin.png" alt="Logotipo" class="img-logo">
+        </div>
+    </header>
+
+    <div class="container-main">
+        <main>
+            
+                <h2>Crea tu encuesta</h2>
+                <form id="surveyForm">
+                    <div class="container-encuesta">
+                        <div class="container-questions">
+                            <label for="question" >Agrega una pregunta:</label>
+                            <br>
+                            <input type="text" name="question" id="question">
+                            <br>
+                            <label for="type">Tipo de respuesta:</label>
+                            <br>
+                            <select name="type" id="type" class="selector">
+                            <option value="text">Campo de texto</option>
+                            <option value="checkbox">Casilla de verificacion(opción multiple)</option>
+                            </select>
+                            <div class="optionContainer">
+                                <label for="option">Opcion 1:</label>
+                                <br>
+                                <input type="text" class="option" name="option">
+                                <br>
+                                <label for="option">Opcion 2:</label>
+                                <br>
+                                <input type="text" class="option" name="option">
+                                <br>
+                                <label for="option">Opcion 3:</label>
+                                <br>
+                                <input type="text" class="option" name="option">
+                                <br>
+                                <label for="option">Opcion 4:</label>
+                                <br>
+                                <input type="text" class="option" name="option">
+                            </div>
+
+                        <button type="submit" id="submit" class="btn-addQuestion">Agregar pregunta</button>
+
+                        </div>
+                        
+
+                        <div class="container-encuesta-creada">
+                            <h2>Encuesta creada</h2>
+                            <ul class="surveyList">
+                                <!--Aquí se mostraran las encuestas creadas-->
+                            </ul>
+                            <button class="sendSurvey">Enviar encuesta</button>
+                        </div>
+                    </div>
+                        
+
+
+                
+                </form>
+                    
+                
+
+        </main>
+    </div>
+    
+</body>
+</html>

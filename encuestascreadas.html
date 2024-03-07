@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuestas en línea</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="imagenes/icon.png">
+</head>
+<body>
+    <header>
+        <div class="container-logo">
+            <img src="imagenes/logo-origin.png" alt="Logotipo" class="img-logo">
+        </div>
+    </header>
+
+    <div class="container-main">
+        <main>
+            <h2>Satisfacción laboral</h2>
+            <form id="surveyForm">
+                <div class="container-encuesta">
+                    <div class="container-questions">
+                        <label>Nombre completo:</label><br>
+                        <input type="text" name="nombre" id="nombre" class="des1"><br><br>
+                        
+                        <label for="type">Empresa correspondiente:</label><br>
+                        <select id="empresa" name="empresa" class="des">
+                            <option value="text">Seleccionar una opción</option>
+                            <option value="enginecore">Engine Core</option>
+                            <option value="bdrive">B-Drive IT</option>
+                        </select><br><br>
+    
+                        <label for="type">¿Cuán satisfecho se encuentra de la empresa en general?</label><br>
+                        <select id="satisfaccion" name="satisfaccion" class="des">
+                            <option value="text">Seleccionar una opción</option>
+                            <option value="muy">Muy satisfecho</option>
+                            <option value="satisfecho">Satisfecho</option>
+                            <option value="poco">Poco satisfecho</option>
+                            <option value="nada">Nada satisfecho</option>
+                        </select><br><br>
+    
+                        <label for="type">¿Cuán probable es que recomiende nuestros productos o servicios?</label><br>
+                        <select id="recomendacion" name="recomendacion" class="des">
+                            <option value="text">Seleccionar una opción</option>
+                            <option value="mucho">Mucho</option>
+                            <option value="maso">Más o menos</option>
+                            <option value="poco">Poco</option>
+                            <option value="nada">Nada</option>
+                        </select><br><br>
+    
+                        <label for="type">¿Cómo calificaría la calidad de la atención recibida?</label><br>
+                        <select name="calidad" id="calidad" class="des">
+                            <option value="text">Seleccionar una opción</option>
+                            <option value="diez">Muy satisfecho</option>
+                            <option value="ocho">Satisfecho</option>
+                            <option value="cuatro">Poco satisfecho</option>
+                            <option value="cero">Nada satisfecho</option>
+                        </select><br><br>
+    
+                        <label>¿Tienes algún comentario o sugerencia?</label><br>
+                        <textarea id="comentario" name="comentario" rows="4" cols="50"></textarea>
+                    </div>
+                </div>
+                <button type="submit" id="abrir-aviso" class="tmbtn">Enviar encuesta</button>
+            </form>
+            <dialog id="modal">
+                <h2>Respuestas enviadas</h2>
+                <br><br>
+                <button id="cerrar-aviso">Cerrar ventana</button>
+            </dialog>
+        </main>
+
+        <script src="script.js"></script>
+
+    </div>
+    
+</body>
+</html>
