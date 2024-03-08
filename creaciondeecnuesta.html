@@ -10,7 +10,7 @@
 <body>
     <header>
         <div class="container-logo">
-            <img src="imagenes/logo-origin.png" alt="Logotipo" class="img-logo">
+            <a href="index.html"><img src="imagenes/logo-origin.png" alt="Logotipo" class="img-logo"></a>
         </div>
     </header>
 
@@ -18,20 +18,25 @@
         <main>
             
                 <h2>Crea tu encuesta</h2>
-                <form id="surveyForm">
+                <form id="surveyForm1">
                     <div class="container-encuesta">
                         <div class="container-questions">
+                            <label for="nombreEncuesta">Nombre de la encuesta:</label>
+                            <br>
+                            <input type="text" id="nombreEncuesta">
                             <label for="question" >Agrega una pregunta:</label>
                             <br>
                             <input type="text" name="question" id="question">
                             <br>
                             <label for="type">Tipo de respuesta:</label>
                             <br>
+
                             <select name="type" id="type" class="selector">
-                            <option value="text">Campo de texto</option>
-                            <option value="checkbox">Casilla de verificacion(opción multiple)</option>
+                                <option value="text">Campo de texto</option>
+                                <option value="checkbox">Casilla de verificación(opción multiple)</option>
                             </select>
-                            <div class="optionContainer">
+
+                            <div class="oculto" id="optionContainer">
                                 <label for="option">Opcion 1:</label>
                                 <br>
                                 <input type="text" class="option" name="option">
@@ -72,6 +77,6 @@
 
         </main>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
