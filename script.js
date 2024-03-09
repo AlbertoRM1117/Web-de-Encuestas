@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Mostrar una alerta con los datos de la encuesta
         var datosString = JSON.stringify(datosEncuestaCreada, null, 2);
-        alert("Datos de la encuesta:\n" + datosString);
+        //alert("Datos de la encuesta:\n" + datosString);
     });
 });
 

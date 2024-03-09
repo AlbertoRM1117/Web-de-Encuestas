@@ -38,7 +38,7 @@ body {
 .container-main {
     width: 100%;
     max-width: 1200px; /* Limitamos el ancho máximo */
-    min-height: 50vh; /* Establecemos una altura mínima de la pantalla */
+    min-height: 90vh; /* Establecemos una altura mínima de la pantalla */
     background-color: rgba(240, 248, 255, 0.562);
     margin: 15px auto;
     border-radius: 12px;
@@ -106,6 +106,14 @@ button:hover{
 ul{
     font-size: 24px;
 }
+.container-encuesta-creada{
+    max-height: 50px;
+}
+.scroll{
+    
+    max-height: 200px; /* Altura máxima del contenedor */
+    overflow-y: auto; /* Habilita el scroll vertical cuando el contenido excede la altura máxima */
+}
 
 @media screen and (max-width:768px) {
     .container-logo{
@@ -138,6 +146,7 @@ ul{
     body {
         width: auto;
         height: auto;
+        
     }
     .container-logo{
         width: auto;
@@ -149,7 +158,8 @@ ul{
 
     .container-main {
         width: auto; /* Reducimos un poco el ancho para pantallas grandes */
-        height: auto; /* Altura automática para ajustarse al contenido */
+        height: 100%; /* Altura automática para ajustarse al contenido */
+        
     }
 
     button {
