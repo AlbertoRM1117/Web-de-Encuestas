@@ -3,15 +3,14 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-image: url(imagenes/fondo2.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgb(250, 238, 216);
 }
 
 .container-logo {
     width: 100%;
     height: 18vh; /* Usamos altura relativa al 18% de la altura de la pantalla */
-    background: rgba(255, 255, 255, 0.637);
+    background: rgba(255, 255, 255, 0.89);
+    border-bottom: 2px solid gray;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -39,19 +38,34 @@ body {
     width: 100%;
     max-width: 1200px; /* Limitamos el ancho máximo */
     min-height: 90vh; /* Establecemos una altura mínima de la pantalla */
-    background-color: rgba(240, 248, 255, 0.562);
-    margin: 15px auto;
+    
+    margin: 40px auto;
     border-radius: 12px;
     box-sizing: border-box;
     padding: 20px; /* Añadimos relleno */
     font-weight: bold;
+    background-image: url(imagenes/fondo2.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.fond-main{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(12, 12, 12, 0.781);
+    border-radius: 10px;
+    padding: 15px 0 0 0 ;
+    
+    
+
 }
 
 h2 {
     font-size: 2.5vw; /* Usamos tamaño de fuente relativo al 2.5% del ancho de la pantalla */
     text-align: center;
     font-family: sans-serif;
-    text-shadow: 0px 0px 20px rgb(251, 255, 0);
+    text-shadow: 0px 0px 20px rgb(255, 255, 255);
+    color: white;
     
 }
 
@@ -63,20 +77,28 @@ h2 {
 
 .container-questions {
     font-size: 2vw; /* Usamos tamaño de fuente relativo al 2% del ancho de la pantalla */
+    margin: 0 15px;
 }
 
 .selector,
 label,
 input,
 button {
-    width: 100%; /* Los elementos ocuparán todo el ancho disponible */
+    width: 90%; /* Los elementos ocuparán todo el ancho disponible */
     max-width: 100%; /* Limitamos el ancho máximo */
     margin: 10px 0; /* Ajustamos los márgenes verticalmente */
     height: 35px;
     
 }
 label{
-    text-shadow: 0px 0px 20px rgb(251, 255, 0);
+    text-shadow: 0px 0px 20px rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+}
+input{
+    font-size: 22px;
+}
+.btn-addQuestion{
+    margin-top: 80px;
 }
 option{
     font-size: 20px;
@@ -107,12 +129,13 @@ ul{
     font-size: 24px;
 }
 .container-encuesta-creada{
-    max-height: 50px;
+    max-height: 500px;
 }
 .scroll{
     
     max-height: 200px; /* Altura máxima del contenedor */
     overflow-y: auto; /* Habilita el scroll vertical cuando el contenido excede la altura máxima */
+    color: white;
 }
 
 @media screen and (max-width:768px) {
@@ -173,4 +196,48 @@ ul{
     }
     
     
+}
+
+
+
+
+/*################ index.html################*/
+
+.container-nav{
+    background-color: rgba(255, 255, 255, 0.89);
+    box-shadow: 3px 5px 9px black;
+}
+.nav-secun{
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: right;
+
+
+}
+
+ul li{
+    display: inline;
+    margin: 0 15px 0 15px;
+    font-weight: bold;
+    font-size: 26px;
+    font-style: italic;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+
+    color: rgb(4, 0, 255);
+}
+
+
+
+
+
+/*##########encuestascreadas.html##########*/
+
+#abrir-aviso{
+    margin-left: 20px;
 }

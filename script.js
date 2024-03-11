@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Agregar evento al formulario para almacenar el nombre de la encuesta
     formCreate.addEventListener("submit", function(event) {
         event.preventDefault();
-        var nombreEncuesta = nombreEncuestaInput.value;
-        localStorage.setItem("nombreEncuesta", nombreEncuesta);
+        //var nombreEncuesta = nombreEncuestaInput.value;
+        //localStorage.setItem("nombreEncuesta", nombreEncuesta);
         // Ocultar el campo de entrada del nombre de la encuesta después de guardar el nombre
         nombreEncuestaInput.style.display = "none";
         nombreEncuestaInput.value = ""; // Limpiar el campo de entrada
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Agregar evento al botón "Agregar pregunta"
     addQuestionButton.addEventListener("click", function() {
-        var nombreEncuesta = localStorage.getItem("nombreEncuesta");
+        var nombreEncuesta = nombreEncuestaInput.value;
         var pregunta = document.getElementById("question").value;
         var tipoRespuesta = document.getElementById("type").value;
         var optionsInput = document.querySelectorAll(".option");
@@ -65,13 +65,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Crear el elemento <li> que contiene la pregunta y agregarlo a la lista
         var listItem = document.createElement("li");
+        var listItemTitle = document.createElement("h2");
+        listItemTitle.textContent = nombreEncuesta;
+        listItemTitle.style.textAlign = "center"; // Centrar el texto
+        listItemTitle.style.fontSize = "30px"; // Cambiar el tamaño de la fuente
         if (tipoRespuesta === "checkbox") {
             var optionsText = opciones.join(", "); // Convertir las opciones en un string separado por comas
             listItem.textContent = pregunta + " (con opciones: " + optionsText + ")"; // Mostrar las opciones en el texto del ítem
         } else {
             listItem.textContent = pregunta; // Mostrar la pregunta sin opciones
         }
+        surveyList.appendChild(listItemTitle)
         surveyList.appendChild(listItem);
+        console.log(datosEncuestaCreada)
 
         // Mostrar una alerta con los datos de la encuesta
         var datosString = JSON.stringify(datosEncuestaCreada, null, 2);
