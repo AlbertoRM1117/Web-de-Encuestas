@@ -10,28 +10,48 @@
 <body>
     <header>
         <div class="container-logo">
-            <img src="imagenes/logo-origin.png" alt="Logotipo" class="img-logo">
+            <a href="index.html"><img src="imagenes/logo-origin.png" alt="Logotipo" class="img-logo"></a>
         </div>
     </header>
+    <div class="container-nav">
+        
+        <nav class="nav-secun">
+            <div class="di"></div>
+            <ul class="ul-menu">
+                <li class="list-menu"><a href="creaciondeecnuesta.html">Crear encuesta</a></li>
+                <li class="list-menu"><a href="mostrarencuestas.html">Encuestas Creadas</a></li>
+                <li class="list-menu"><a href="encuestascreadas.html">Encuesta de satisfacción</a></li>
+            </ul>
+        </nav>
+
+    
+   
+    
+    </div>
 
     <div class="container-main">
-        <main>
+        <main class="fond-main">
             
                 <h2>Crea tu encuesta</h2>
-                <form id="surveyForm">
+                <form id="surveyForm1">
                     <div class="container-encuesta">
                         <div class="container-questions">
+                            <label for="nombreEncuesta">Nombre de la encuesta:</label>
+                            <br>
+                            <input type="text" id="nombreEncuesta">
                             <label for="question" >Agrega una pregunta:</label>
                             <br>
                             <input type="text" name="question" id="question">
                             <br>
                             <label for="type">Tipo de respuesta:</label>
                             <br>
+
                             <select name="type" id="type" class="selector">
-                            <option value="text">Campo de texto</option>
-                            <option value="checkbox">Casilla de verificacion(opción multiple)</option>
+                                <option value="text">Campo de texto</option>
+                                <option value="checkbox">Casilla de verificación(opción multiple)</option>
                             </select>
-                            <div class="optionContainer">
+
+                            <div class="oculto" id="optionContainer">
                                 <label for="option">Opcion 1:</label>
                                 <br>
                                 <input type="text" class="option" name="option">
@@ -56,11 +76,17 @@
 
                         <div class="container-encuesta-creada">
                             <h2>Encuesta creada</h2>
-                            <ul class="surveyList">
-                                <!--Aquí se mostraran las encuestas creadas-->
-                            </ul>
-                            <button class="sendSurvey">Enviar encuesta</button>
+                           <div class="scroll">
+                                <ul class="surveyList">
+                                    <!--Aquí se mostraran las encuestas creadas-->
+                                </ul>
+                                
+                           </div>
+                           <div class="cont-btn-envio-regis">   
+                                <button class="sendSurvey">Enviar encuesta</button>
+                            </div>
                         </div>
+                        
                     </div>
                         
 
@@ -72,6 +98,6 @@
 
         </main>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
