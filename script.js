@@ -102,6 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 /*############js de pagina encuestas creadas##############*/
+
 const abrirAviso = document.querySelector("#abrir-aviso");
 const cerrarAviso = document.querySelector("#cerrar-aviso");
 

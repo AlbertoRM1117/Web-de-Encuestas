@@ -18,6 +18,7 @@ body {
 
 .img-logo {
     margin: 0 5vw; /* Usamos margen relativo al 5% del ancho de la pantalla */
+    cursor: pointer;
 }
 
 .tmbtn{
@@ -149,8 +150,14 @@ ul{
     .container-main {
         width: auto; /* Ajustamos el ancho en pantallas pequeñas */
         background-image: none;
-        margin: 10px 10px;
+        margin: 10px;
         
+    }
+    .container-questions{
+        text-align: center;
+    }
+    .btn-addQuestion{
+        text-align: center;
     }
     label,button, h2{
         font-size: 24px;
@@ -159,8 +166,19 @@ ul{
         width: auto;
         height: auto;
     }
+    .cont-btn-envio-regis{
+        text-align: center;
+    }
+    .surveyList{
+        text-align: left;
+    }
     
-    
+    /* index.html*/
+
+    .traslate-co{
+        box-sizing: content-box;
+        padding: 10px;
+    }
 }
 
 
@@ -226,14 +244,35 @@ ul li{
 a{
     text-decoration: none;
     color: black;
+    transition: all 1s;
 }
 a:hover{
-
+    text-shadow: 0 0 25px black;
     color: rgb(4, 0, 255);
+    
+}
+.text-inicio{
+    font-size: 28px;
+    color: white;
+    text-shadow: 0 0 25px white;
+    text-align: center;
+}
+.main-index{
+    
+   height: auto;
+   
+   
+
+}
+.traslate-co{
+    text-align: center;
+    
 }
 
 
 
+
+ 
 
 
 /*##########encuestascreadas.html##########*/
