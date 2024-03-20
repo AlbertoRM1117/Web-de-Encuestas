@@ -31,7 +31,6 @@
     box-shadow: 0 0 40px gold;
     border: 5px solid gold;
     color: blue;
-    background: gray;
     
 }
 .login-session-container{
@@ -48,23 +47,22 @@ h2{
     padding-top: 50px;
 }
 
-.cont-label-inp{
-    
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin: 10px auto;
-    
-}
+
 
 .btn-login{
 
-    width: 120px;
-    height: 30px;
-    
+    width: 180px;
+    height: 40px;
+    border-radius: 5px;
     background: rgb(20, 198, 252);
     color: white;
     margin: 20px 70px;
     
+}
+a{
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
 }
 
